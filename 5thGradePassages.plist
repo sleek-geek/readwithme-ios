@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>The Dream Ends (from Alice in Wonderland)</string>
+		<key>Text</key>
+		<string>Alice found herself lying on the bank, with her head in her sister&apos;s lap. Her sister was gently brushing away some dead leaves that had floated down from the trees onto Alice&apos;s hair and face. &quot;Wake up, Alice dear!&quot; said her sister. &quot;What a long sleep you&apos;ve had!&quot;
+
+&quot;Oh, I&apos;ve had such a curious dream!&quot; said Alice. She then told her sister, as well as she could, all those strange adventures. When she had finished, her sister kissed her and said, &quot;That was a curious dream, dear. Now run in and have your tea. It&apos;s getting late.&quot;
+
+So Alice got up and ran off, thinking while she ran what a wonderful dream it had been. But her sister sat, leaning her head on her hand, watching the setting sun, and thinking of little Alice and all of her adventures. She slowly closed her eyes, and began to imagine that she herself was a little child again, with bright eyes, filled with simple joys and the curious, wonderful dreams of happy summer days.</string>
+		<key>Comp1</key>
+		<string>What did Alice think of her dream?</string>
+		<key>Comp2</key>
+		<string>What does her sister tell her after she wakes up?</string>
+		<key>Comp3</key>
+		<string>What does the word &apos;curious&apos; mean in the sentence &quot;I had such a curious dream!&quot;?</string>
+		<key>Lexile</key>
+		<integer>840</integer>
+		<key>Grade</key>
+		<integer>5</integer>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Landfill</string>
+		<key>Text</key>
+		<string>Have you ever wondered about the waste that is collected from your house? Where is it taken? What is done to it? Well, it goes to a place called a landfill. A landfill can be described as a dumping ground for all the waste that is collected from a city.
+A landfill has to follow certain rules so that it can operate safely. The trucks that collect waste are inspected when they arrive at a landfill. Any waste that would be dangerous if dumped into a landfill is removed from them. This includes chemicals that emit harmful gases and would make the landfill a health risk for workers. The trucks are taken to what is called a &apos;weigh bridge&apos; so that they can be weighed with their load. From here, the trucks drive to what is called the &apos;tipping face&apos; where they unload their waste. The waste that is brought to a landfill is put through machines called &apos;compacters.&apos; This reduces the amount of space the waste will occupy at a landfill. It is an important step because it creates more room for more waste. The waste that is deposited at a landfill is daily covered. Covers include layers of soil, wood chips or other green waste. The trucks return to the weigh bridge in order to be weighed again, this time without their load. The difference in weights allows a record to be kept of how many tons of waste is brought in daily to a landfill. Before leaving a landfill, the trucks have to get their wheels cleaned so that they don&apos;t carry odors or diseases out of a landfill.
+A landfill has many health risks. When waste rots, it releases a gas called methane that pollutes the atmosphere. Waste that is sitting in a landfill may also leak and pollute the groundwater. Rats and flies at a landfill may carry many diseases.
+To stop the build-up of waste at a landfill it is important to reduce household waste. Recycling and composting are both easy ways to reduce the waste that goes to a landfill.</string>
+		<key>Comp1</key>
+		<string>Why does “a dumping ground” have to follow rules and guidelines?</string>
+		<key>Comp2</key>
+		<string>What are the health risks of a landfill?</string>
+		<key>Comp3</key>
+		<string>Why do you think it important to reduce the waste that gets to a landfill?</string>
+		<key>Lexile</key>
+		<integer>910</integer>
+		<key>Grade</key>
+		<integer>5</integer>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Morgan Takes Portobello</string>
+		<key>Text</key>
+		<string>Buccaneer Henry Morgan is one of the most famous pirates in history. An Englishman who lived in Jamaica, Morgan grew to become one of the most feared sea men of his time. Perhaps his most remarkable raid was the one against the the Caribbean port city of Portobello.
+Portobello was located on the Isthmus of Panama. The Spanish who ruled over it in the mid 1600s kept much treasure there. Morgan knew this and wanted to score a big hit.
+In July of 1668 Morgan sailed his fleet of twelve ships and 500 men towards northern Panama. They meant to surprise the weakly guarded port, but were spotted. A small garrison of soldiers fired on the buccaneers. The gunfire alerted the residents that they were under attack.
+Morgan took his men to the castle in Portobello where the treasure was rumored to be. After a short exchange of fire, Morgan captured the castle and with it, the town of Portobello. The disgraced officer in charge of defending the castle chose death at the hands of the pirates. It was a wish they were happy to fulfill.
+With the town and its treasure in his hands, Morgan went on to ask for more money from the Spanish authorities in Panama. They refused. Instead they sent 800 soldiers to recapture Portobello. But the going was tough and the expedition failed. In the end Morgan and his men received the ransom. Happy with their score, they sailed back to Jamaica, their ships hulls filled with Spanish booty.</string>
+		<key>Comp1</key>
+		<string>What is this passage mostly about?</string>
+		<key>Comp2</key>
+		<string>Name two details from the text.</string>
+		<key>Comp3</key>
+		<string>Why did the officer in charge of the castle choose death?</string>
+		<key>Lexile</key>
+		<integer>820</integer>
+		<key>Grade</key>
+		<integer>5</integer>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>Pandas</string>
+		<key>Text</key>
+		<string>The giant panda is an animal with a chubby black and white body and black legs. Its head is large and round, and its white face has black patches around each eye. Panda cubs are extremely tiny when they are born, weighing only about 5 ounces. As adults, however, giant pandas can weigh as much as 350 pounds.
+Giant pandas are found only on high mountain slopes in western and southwestern China where they enjoy forests with plenty of bamboo shoots for them to eat. Giant pandas can spend 16 hours a day eating. In one year, a panda can eat more than 10,000 pounds of bamboo. Although the giant panda eats chiefly bamboo shoots, it sometimes eats other plants, fish, and small animals, too.
+As a special gift to the people of the United States, China gave two giant pandas to a national zoo in Washington, D.C., in 1972. The pandas lived there for many years, eating bamboo shoots and making all of the zoo visitors laugh. Nowadays a few zoos around the world are proud to have pandas. They are always a popular attraction that never fail to attract lots of visitors, and ticket sales.</string>
+		<key>Comp1</key>
+		<string>How would you describe the Panda&apos;s natural habitat?</string>
+		<key>Comp2</key>
+		<string>The panda is omnivore because?</string>
+		<key>Comp3</key>
+		<string>What does the passage imply about why zoos try to bring pandas from China?</string>
+		<key>Lexile</key>
+		<integer>1120</integer>
+		<key>Grade</key>
+		<integer>7</integer>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>The Mice and the Weasels</string>
+		<key>Text</key>
+		<string>The Weasels and the Mice were always at war with each other, always spilling blood over the smallest of things. The Weasels were always the victors. The Mice thought it was because they had no great Mouse leaders to lead them, and that they needed more training.
+They chose Mice famous for the strength and wisdom to be their generals, as well as those most noted for their courage in the fight.
+&quot;These Mice will know how to lead is better in battle!&quot; they said. &quot;They will teach us to form battalions and platoons.&quot;
+The new Mouse army tried hard to discipline itself and to learn how to improve their fighting skills. They studied and made plans and learned how to take orders on the battlefield.
+Like this they prepared until one day, the Chief Mouse decided they were ready to defeat the Weasels and challenged them to battle. The Mouse generals, wanting to appear more distinguished, decorated their heads with straw. Filled with pride, they wanted all the other Mice to look up to them.
+But as soon had the battle begun, a great rout overwhelmed the poor Mice! They ran off as fast as they could to their holes. The generals, not being able to see over the decorations on their heads, were all captured and eaten by the Weasels.</string>
+		<key>Comp1</key>
+		<string>Why did the mice generals decorate their heads with straw?</string>
+		<key>Comp2</key>
+		<string>What is the moral of this fable?</string>
+		<key>Comp3</key>
+		<string>What did the mice think they needed to defeat the Weasels? Name two ideas from the text.</string>
+		<key>Lexile</key>
+		<integer>970</integer>
+		<key>Grade</key>
+		<integer>7</integer>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Spicy Curry</string>
+		<key>Text</key>
+		<string>I don&apos;t skip any detail when I am making spicy shrimp curry to celebrate my mom&apos;s birthday. Only fresh, succulent shrimp, still smelling of the ocean will do. Only the best tomatoes, vine-ripened and locally-harvested, measure up.
+I roll up my sleeves and get down to serious business in the kitchen. I top and tail the shrimp, chop the vegetables and mince the herbs. I dig out ginger root and green chilies from the vegetable drawer in the refrigerator before cranking open the can of coconut milk. I get the skillet to heat up, then, spend the next few minutes on some fast and furious stir frying. I get the onions to only slightly change color before adding the tomatoes, and so forth. I wish I could provide a definite recipe, but I am a flinger in the kitchen. What I insist on is a sturdy skillet and fresh ingredients. As for the rest, I would say that I make the best of whatever is at hand. Some crushed ginger, a touch of cumin, perhaps some smoked red chilies, along with coconut milk will make an excellent shrimp curry. However, if you are out of those, then diced onions and crushed tomatoes, with a couple of spoons of curry powder for heat, will work just fine too.
+While the curry simmers, I clean up the mess I always seem to make in the kitchen while cooking. I transfer the dish to a pretty bowl and hunt out mom&apos;s favorite linen napkins to place next to the dish. &quot;Dinner is served&quot;, I call out, just as the aroma of garlic and cilantro is starting to fill up the air.</string>
+		<key>Comp1</key>
+		<string>What does the writer mean when he calls himself a “flinger in the kitchen”?</string>
+		<key>Comp2</key>
+		<string>Why do you think the writer takes care to hunt out his mom’s favorite napkins to place next to the dish?</string>
+		<key>Comp3</key>
+		<string>What can you do if you are out of smoked chilis? </string>
+		<key>Lexile</key>
+		<integer>1090</integer>
+		<key>Grade</key>
+		<integer>7</integer>
+	</dict>
+</array>
+</plist>

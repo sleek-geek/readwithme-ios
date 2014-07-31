@@ -1,0 +1,95 @@
+<html>
+<head>
+<style>
+.miscue
+{
+	font-weight: bold;
+	color: red;
+    font-family:'Verdana';
+    text-decoration:line-through;
+}
+    body{
+        
+        
+        font-family:'Verdana';
+    }
+     
+</style>
+<script>
+function formatText( id, content, miscues)
+{
+     
+    
+	// Split paragraphs up into lines.
+	var lines = content.split(/,,n,,/);
+
+	var formattedText = '';
+	var currentPosition = 0;
+
+	// Go through each line and format it.
+	for(var k=0; k<lines.length; k++)
+	{
+		// If this line has no content, just put a break.
+		if(lines[k].length == 0)
+		{
+			formattedText += "<br />";
+            
+            //subtract a current postion
+            currentPosition++;
+            
+			continue;
+		}
+
+		// Split paragraph value by one or more spaces
+		var words = lines[k].split(/ +/);
+
+		// Start building the formatting text.
+		for(var i=0; i<words.length; i++)
+		{
+			// Figure out if current word is a miscue.
+			var isMiscue = false;
+			for(var j=0; j<miscues.length; j++)
+			{
+				if(currentPosition == miscues[j])
+				{
+					isMiscue = true;
+					break;
+				}
+			}
+
+			// If miscue, wrap word with a span that is style with class misue
+			if(isMiscue)
+			{
+				formattedText += '<span class="miscue">'+words[i]+'</span> ';
+			}
+			else
+			{
+				formattedText += words[i]+' ';
+			}
+
+			currentPosition++;
+		}
+
+		// Append a line break at the end of the line.
+		formattedText += "<br />";
+	}
+
+	// Put the newly formatted string back into passage
+	//document.getElementById(id).innerHTML = formattedText.replace(/<br \/>$/, '') ;
+    //formattedText.replace(/,,q,,/, "'").replace(/<br \/>$/, '') ;
+    document.getElementById(id).innerHTML = formattedText.replace(/,,q,,/g, "'").replace(/<br \/>$/g, '') ;
+}
+
+//
+
+
+</script>
+</head>
+<body  >
+    <hr>
+    <h4>
+        
+
+<p id="passagetext"></p>
+</body>
+</html>

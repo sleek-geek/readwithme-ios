@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>Basketball</string>
+		<key>Text</key>
+		<string>Basketball is a very popular sport. It can be played at school, in parks and homes. All a player needs is a hoop, a ball, a backstop, and a hard floor. People practice for hours to become good players.
+Basketball is more than just bouncing a ball and making baskets. Players need to be fast thinkers. They have to know when to make a pass and when to shoot. They also have to be in great physical shape.
+Team play is also important. The best teams know how to work together to win. Teams have to have good defense, too. It doesn&apos;t matter if a team can make a lot of baskets if it lets other teams do the same to them. A good defense can often win the game. Blocking a shot and getting a rebound are some ways the defense can help the team out.
+Many kids these days want to become basketball players when they grow up. They dream of one day scoring the winning basket at the finals. They wish that one day they get chosen to play for their favorite team. But to make it as a professional it takes a lot of hard work. Basketball players need to get good grades in school to stay on the team. Most players also go to college where they get to play and get noticed by the pros. So if you are serious about basketball, study and get good grades, and practice!</string>
+		<key>Comp1</key>
+		<string>Name two things you need in order to be a good basketball player</string>
+		<key>Comp2</key>
+		<string>What are three details you remember from this passage.</string>
+		<key>Comp3</key>
+		<string>Why should basketball players go to college?</string>
+		<key>Lexile</key>
+		<integer>710</integer>
+		<key>Grade</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Early Flight</string>
+		<key>Text</key>
+		<string>Long ago there was an artist who also was an inventor. His name was Leonardo DaVinci. Like many people before him, he dreamed of one day being able to travel by air just like birds flew with their wings. He invented and drew many aircraft, some of which were shaped like a bird. But he never got around to building them, much less to fly in one of them. He was so busy with all kinds of inventions, besides, everyone who had tried to fly had always failed.
+Time passed and people decided it would be better to travel in balloons. They began designing and building large chambers filled with hot air or gas which was lighter than air. The men rode in a basket and they could travel across the sky floating with the currents of air. From up high they could see the houses and trees, and even church steeples and roofs of buildings. Balloons had a problem, however. They could not be handled easily. They moved in the direction the wind was going and not where people wanted to go.
+Later people invented another type of aircraft. It was like a giant balloon, but longer. This was known as a dirigible, or zeppelin. Zeppelins had a motor and a rudder to steer in the desired direction. But they had their problems too. The gas they used was very flammable. That means that it could burn. This happened to the Hindenburg, a German airship which caught fire when landing in New Jersey in 1937. Many people died. After that tragedy most gave up on the idea of traveling by zeppelin. Besides, airplanes were becoming the new rulers of the sky.
+Today millions of people travel by plane all over the world. What will we invent next? Will we ever fly amongst the clouds like the birds with some future device? Only time will tell.</string>
+		<key>Comp1</key>
+		<string>Name two details you remember from the text</string>
+		<key>Comp2</key>
+		<string>What is this passage mostly about?</string>
+		<key>Comp3</key>
+		<string>What problem did hot air balloons have?</string>
+		<key>Lexile</key>
+		<integer>790</integer>
+		<key>Grade</key>
+		<integer>3</integer>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Story Time</string>
+		<key>Text</key>
+		<string>&quot;May I have a story?&quot; said the little girl to her father.
+&quot;Yes, my dear,&quot; said father. &quot;Would you like the penguin story again?&quot;
+&quot;Yes,&quot; the girl said, &quot;I like that one a lot.&quot;
+Father picked the book from the bedside. He sat down on the bed, next to the little girl. He turned the pages of the book slowly. His little girl liked to look at all the pictures first.
+&quot;You can begin now,&quot; the little girl said. She was done looking at the pictures.
+Father began to read. The story was about a penguin named Leo. Leo was afraid of the water. On the first day of Swim Camp, Leo went and hid himself. When he was found, he said he wasn&apos;t feeling very well. He asked to be sent home. His teacher told him to come and sit by her. She said he may want to watch as she helped other penguins learn how to swim. Leo could not say &apos;no.&apos; He came and sat down on a chair next to his teacher. He watched as the teacher showed Ted how to use his flippers in water. He found himself leaning in to listen when the teacher told Sam how to tuck her head near her shoulders. She said it would help her move quickly through the water. The teacher told a group of penguins how keeping their feet close to their tails would help them swim a whole lot better. Leo found himself wanting to try it out too. It was beginning to look like fun! Maybe it was not such a bad idea for him to try out some of the things he had learned today?
+He handed dry towels to his friends when they came out of the pool.
+&quot;I&apos;d like to try swimming tomorrow,&quot; he said softly to his teacher.
+&quot;Of course, Leo,&quot; said the teacher.
+&quot;Leo skipped off to the tent he shared with his best friend, Sty. Tomorrow would be a big, big day.&quot; Father read these last lines, then closed the book and placed it gently by the bedside. &quot;Are you afraid of something too?&quot; he asked, turning to the little girl. The little girl was fast asleep. Father kissed her goodnight and put out the lamp.</string>
+		<key>Comp1</key>
+		<string>What did the little girl like to do before having the story read to her?</string>
+		<key>Comp2</key>
+		<string>Why did Leo ask to be sent home?</string>
+		<key>Comp3</key>
+		<string>For Leo, what would be different the next day at Swim Camp?</string>
+		<key>Lexile</key>
+		<integer>560</integer>
+		<key>Grade</key>
+		<integer>3</integer>
+	</dict>
+</array>
+</plist>

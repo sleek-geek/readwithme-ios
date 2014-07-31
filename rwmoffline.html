@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+
+
+<html>
+
+ <head>
+	<title>Read with Me</title>
+	<!--hiding the browser URL bar (top) and the navigation bar (bottom)-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-1.8.2.min.js"></script>
+ 
+<!--
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
+
+
+<link rel="stylesheet" href="https://readwithmeapp.com/js/common.css" />
+<link rel="stylesheet" href="https://readwithmeapp.com/js/mobile.css"  type="text/css" />
+
+<script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+
+<script src="https://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+ <link href="http://readwithmeapp.com/skin/rwm/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+	
+	-->
+<style>
+    span.incorrect { color:red; font-weight:bold; }
+    span.correct { color:green; font-weight: bold }
+    div.linenumbers {
+        width: 40px;
+        border-right: 1px solid black;
+        float: left;
+        text-align: right;
+        padding-right: 5px;
+        margin-right: 5px;
+    }
+
+span {
+    
+    /*border: 1px solid red;*/
+    font-family:'Verdana';
+    
+}
+a._showoptions{
+    
+    font-family:'Verdana';
+    color:#3f67a7;
+    
+}
+
+
+#startButton{
+    
+    width:100px;
+    height:40px;
+    
+    border-style:solid;
+    border-radius:10px;
+    border-width:2px;
+    background-color:#3f67a7;
+    margin:5px;
+    color:#FFFFFF;
+    padding-top:8px;
+    
+}
+#saveButton{
+    
+    width:100px;
+    height:40px;
+    background-color:lightgray;
+    border-radius:10px;
+    margin:5px;
+    color:#FFFFFF;
+    padding-top:8px;
+    
+    
+}
+p.buttontextSave{
+    
+    font-family:'Verdana';
+    font-size:18px;
+    margin-top:5px;
+    font-weight:bold;
+    
+}
+p.buttontextStartStop{
+    
+    font-family:'Verdana';
+    font-size:18px;
+    margin-top:5px;
+    font-weight:bold;
+    
+}
+
+span.unread, div.unread { color: #C0C0C0; }
+div.unread { border-right: 1px solid #C0C0C0; }
+.textshort { height: 250px; }
+#displaytext { overflow: hidden; }
+.highlight { background-color: yellow; }
+
+#controls{
+    
+    
+    
+    
+}
+
+
+
+</style>
+
+<script>
+        /*   function formatText( theText, theTimerOption )
+         {
+         
+         
+        // var psgText=$('#displaytext').innerHTML ;
+         
+         var newTextWithSingleQuotes =theText.replace(/,,q,,/g, "\"").replace(/<br \/>$/g, '') ;
+         
+         
+         
+         var finaltext = newTextWithSingleQuotes.replace(/,,s,,/g, "'").replace(/<br \/>$/g, '') ;
+         
+         
+         
+         document.getElementById('displaytext').innerHTML = finaltext;
+        // document.getElementById('#displaytext').innerHTML = theText.replace(/,,q,,/g, "'").replace(/<br \/>$/g, '') ;
+         
+         var annotations = [];
+         var miscues = {};
+         var isRunning = false;
+         var lastWordLogged = false;
+         var lastError;
+         var showLineNumbers = false;
+         
+         
+         
+         
+         if (theTimerOption==1){
+             
+              alert ('the 1-min is active');
+            
+             var timeLeft = 60;
+             
+             min = Math.floor((timeLeft)/60);
+             sec = (timeLeft)%60;
+             min = (min < 10) ? "0"+min : min;
+             sec = (sec < 10) ? "0"+sec : sec;
+             $('#timer').html(min+":"+sec);
+             
+         } else{
+             
+             alert ('the Stopwatch is active');
+           var timeElapsed=0;
+           min = Math.floor((timeElapsed)/60);
+           sec = (timeElapsed)%60;
+           min = (min < 10) ? "0"+min : min;
+           sec = (sec < 10) ? "0"+sec : sec;
+           $('#timer').html(min+":"+sec);
+           
+           
+             
+         }
+        
+         
+         function timerTickUp(){
+             
+             
+             if(isRunning && timeElapsed < 3599)
+             {
+                 timeElapsed++;
+                 min = Math.floor((timeElapsed)/60);
+                 sec = (timeElapsed)%60;
+                 min = (min < 10) ? "0"+min : min;
+                 sec = (sec < 10) ? "0"+sec : sec;
+                 $('#timer').html(min+":"+sec);
+                 
+                 if(timeElapsed == 3599)
+                 {
+                     alert("Time has expired. Please select last word student read.");
+                     
+                     isRunning = false;
+                     $('#saveButton').css('background-color', '#FF9900');
+                     $('.buttontextStartStop').text('Start');
+                     $('#startButton').css('background-color', '#3f67a7');
+                     
+                 }
+             }
+             
+         }
+         
+         function timerTickDown(){
+             
+             if(isRunning && timeLeft > 0)
+             {
+                 
+                 
+                 
+                 timeLeft--;
+                 if(timeLeft > 0)
+                 {
+                     min = Math.floor((timeLeft)/60);
+                     sec = (timeLeft)%60;
+                     min = (min < 10) ? "0"+min : min;
+                     sec = (sec < 10) ? "0"+sec : sec;
+                     $('#timer').html(min+":"+sec);
+                 } //end timeLeft>0
+                 
+                 if(timeLeft == 0)
+                 {
+                     $('#timer').html("00:00");
+                     
+                     //  $('#startButton').css('background-color', '#AD3333', 'border-color', 'blue');
+                     
+                     alert("Time has expired. Please select last word student read.");
+                     $('#saveButton').css('background-color', '#FF9900');
+                     $('.buttontextStartStop').text('Start');
+                     $('#startButton').css('background-color', '#3f67a7');
+                     isRunning = false;
+                     $('._save').attr('src', '/images/save.png');
+                     // $('._startstop').attr('src', '/images/start.png');
+                     
+                     
+                 }//end if time left = 0
+             }//end if isRunning && timeLeft
+             
+         } //end timerTickDown
+         
+         
+
+
+
+
+         function timerTick()
+        
+         {
+             
+             var thetimerOption = 1;
+             
+             if (theTimerOption==1){
+                 
+                // alert ('the 1-min is active');
+                 
+             
+                 
+             
+             
+             if(isRunning && timeLeft > 0)
+             {
+                 
+                 
+                 
+                 timeLeft--;
+                 if(timeLeft > 0)
+                 {
+                     min = Math.floor((timeLeft)/60);
+                     sec = (timeLeft)%60;
+                     min = (min < 10) ? "0"+min : min;
+                     sec = (sec < 10) ? "0"+sec : sec;
+                     $('#timer').html(min+":"+sec);
+                 } //end timeLeft>0
+                 
+                 if(timeLeft == 0)
+                 {
+                     $('#timer').html("00:00");
+                     
+                     //  $('#startButton').css('background-color', '#AD3333', 'border-color', 'blue');
+                     
+                     alert("Time has expired. Please select last word student read.");
+                     $('#saveButton').css('background-color', '#FF9900');
+                     $('.buttontextStartStop').text('Start');
+                     $('#startButton').css('background-color', '#3f67a7');
+                     isRunning = false;
+                     $('._save').attr('src', '/images/save.png');
+                    // $('._startstop').attr('src', '/images/start.png');
+                   
+                     
+                 }//end if time left = 0
+               }//end if isRunning && timeLeft
+             }//end timer option
+             
+             else{
+                 if(isRunning && timeElapsed < 3599)
+                 {
+                     timeElapsed++;
+                     min = Math.floor((timeElapsed)/60);
+                     sec = (timeElapsed)%60;
+                     min = (min < 10) ? "0"+min : min;
+                     sec = (sec < 10) ? "0"+sec : sec;
+                     $('#timer').html(min+":"+sec);
+                     
+                     if(timeElapsed == 3599)
+                     {
+                         alert("Time has expired. Please select last word student read.");
+                         
+                         isRunning = false;
+                         $('#saveButton').css('background-color', '#FF9900');
+                         $('.buttontextStartStop').text('Start');
+                         $('#startButton').css('background-color', '#3f67a7');
+                         
+                     }
+                 }
+                 
+                 
+                 
+             } //end else timer option (stopwatch)
+             
+             
+         }//end Timer Tick...
+         
+         setInterval(timerTick, 1000);
+         
+         if(showLineNumbers == false)
+         {
+             $('.linenumbers').hide();
+         }
+         
+         $('#displaytext span').click(function(e)
+          {
+                                      // Ignore clicks if not running.
+             if(!isRunning) {
+                 if(timeLeft == 60 || timeElapsed==0) {
+                     return;
+                   }
+                  if(lastWordLogged) {
+                     var wasLastWord = $(this).hasClass('lastword');
+                      $('.lastword').text($('.lastword').text().replace(/]$/, ''));
+                       $('.lastword').removeClass('lastword');
+                       $('.unread').removeClass('unread');
+                                      
+                             if(wasLastWord)  {
+                                      // Just deselecting the last word.
+                                lastWordLogged = false;
+                                      return;
+                                 }
+                   } //end if lastwordlogged
+                                      
+                                      var id = $(this).attr('id');
+                                      
+                                      $('#'+id).toggleClass('lastword');
+                                      $('#'+id).text($('#'+id).text()+"]");
+                                      lastWordLogged = true;
+                                      
+                                      var time = new Date();
+                                      
+                                      annotations[annotations.length] = {'type': 'l', 'time': time.getTime(), 'id': id, 'word': $(this).text().replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '')};
+                                      console.log(annotations);
+                                      
+                                      $(this).nextAll('span, div').addClass('unread');
+                                      return;
+                                      }
+                                      
+                                      var id = $(this).attr('id');
+                                      
+                                      if(id.substring(0,5) == "space")
+                                      {
+                                      return;
+                                      }
+                                      
+                                      var time = new Date();
+                                      var word = $(this).text().replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '').toLowerCase();
+                                      
+                                      $('#overlay').show();
+                                      $(this).addClass('highlight');
+                                      
+                                      var dSize = $('#displaycorrection').height();
+                                      var elem = $(e.currentTarget);
+                                      var posY = elem.offset().top+elem.height();
+                                      var bottom = $(window).scrollTop()+$(window).height();
+                                      
+                                      if(posY+dSize > bottom)
+                                      {
+                                      posY = elem.offset().top-dSize-10;
+                                      
+                                      if(posY-dSize < $(window).scrollTop())
+                                      {
+                                      posY = $(window).scrollTop()+(($(window).height()-dSize)/2);
+                                      }
+                                      }
+                                      
+                                      $('#displaycorrection').css('left', elem.offset().left+'px')
+                                      .css('top', (posY)+'px')
+                                      .show();
+                                      
+                                      lastError = {'type': 'i', 'time': time.getTime(), 'id': id, 'word': word};
+                                      
+                                      
+                                      
+                   }); //end displaytext
+                                      
+                                      $('._selectnone').click(function()
+                                                              {
+                                        $('#'+lastError.id).removeClass('incorrect');
+                                        $('#'+lastError.id).removeClass('highlight');
+                                        $('#overlay').hide();
+                                        $('#displaycorrection').hide();
+                                        
+                            
+                                                              
+                                                              
+                                       });
+                                        
+                                        
+                                        
+          
+         
+                                        $('._selecterrortype').click(function() {
+                                                                     
+                                                                     
+                                                                     
+                                        $('#'+lastError.id).removeClass('highlight');
+                                        $('#overlay').hide();
+                                        $('#displaycorrection').hide();
+                                                                                           
+                                        var errortype = $(this).attr('data-errortype');
+                                                                                           
+                                                for(var i=annotations.length-1; i>=0; i--)
+                                                            {
+                                                            if(annotations[i].id && annotations[i].id == lastError.id)
+                                                                        {
+                                                                            annotations.splice(i, 1);
+                                                                            miscues[lastError.word]--;
+                                                                            break;
+                                                                        }
+                                                            }
+                                                                                           
+                                        $('#'+lastError.id).addClass('incorrect');
+                                                                                           
+                                        lastError.type = errortype;
+                                        annotations[annotations.length] = lastError;
+                                                                                           
+                                        console.log(lastError);
+                                        var word = lastError.word;
+                                                                                           
+                                      if(miscues[word])
+                                          {
+                                              miscues[word]++;
+                                            }
+                                           else
+                                             {
+                                              miscues[word] = 1;
+                                              }
+                                                                                           
+                                              var list = "";
+                                             for(var k in miscues)
+                                               {
+                                                if(miscues[k] > 1)
+                                               {
+                                               list += k+" <small>("+miscues[k]+")</small><br />";
+                                               }
+                                                                                           
+                                                if(miscues[k] == 1)
+                                              {
+                                              list += k+"<br />";
+                                               }
+                                             }
+                                                                                           
+                                              $('#miscues').html(list);
+                                                                                           
+                                              console.log(annotations);
+                                              });
+                                                                                           
+                                     $('._selectcorrecttype').click(function() {
+                                             $('#'+lastError.id).removeClass('highlight');
+                                            $('#overlay').hide();
+                                            $('#displaycorrection').hide();
+                                            var correcttype = $(this).attr('data-correcttype');
+                                            $('#'+lastError.id).addClass('correct');
+                                           lastError.type = correcttype;
+                                          $('#'+lastError.id).addClass('correct');
+                                          annotations[annotations.length] = lastError;
+                                     });
+                                                                                                                          
+                                      $('._startstop').click(function() {
+                                       var stopstartSrc;
+                                       var saveSrc;
+                                       var time = new Date();
+                                       if(isRunning) {
+                                             // stopstartSrc = '/images/start.png';
+                                              $('.buttontextStartStop').text('Start');
+                                               $('#startButton').css('background-color', '#3f67a7');
+                                               $('#saveButton').css('background-color', '#FF9900');
+                                                             
+                                                var myAppName = 'stoppinglclock';
+                                                             var myActionType = 'stoppingclockJSON';
+                                                             // var dictionary= {'value', 'START'};
+                                                             //  var jsonString = (JSON.stringify(dictionary));
+                                                             
+                                                             
+                                                             
+                                                             //  var escapedJsonParameters = escape(jsonString);
+                                                             
+                                                             var url = myAppName + '://' + myActionType + "#"  ;
+                                                             
+                                                             
+                                                             document.location.href = url;
+                                                             
+                                                             
+                                                             
+                                              //saveSrc = '/images/save.png';
+                                              isRunning = false;
+                                              annotations[annotations.length] = {'type': 'b', 'time': time.getTime()};
+                                       } else {
+                                                             
+                                                             
+                                                             var myAppName = 'startclock';
+                                                             var myActionType = 'startingclockJSON';
+                                                             // var dictionary= {'value', 'START'};
+                                                             //  var jsonString = (JSON.stringify(dictionary));
+                                                             
+                                                             
+                                                             
+                                                             //  var escapedJsonParameters = escape(jsonString);
+                                                             
+                                                             var url = myAppName + '://' + myActionType + "#"  ;
+                                                             
+                                                              
+                                                             document.location.href = url;
+                                                             
+                                                             
+                                                             
+                                                             
+                                                             
+                                         $('.buttontextStartStop').text('Stop');
+                                         $('#startButton').css('background-color', '#AD3333', 'border-color', 'blue');
+                                                             
+                                        // stopstartSrc = '/images/stop.png';
+                                         saveSrc = '/images/savedisabled.png';
+                                         isRunning = true;
+                                         annotations[annotations.length] = {'type': 'a', 'time': time.getTime()};
+                                                                                                  }
+                                         console.log(annotations);
+                                         $('._startstop').attr('src', stopstartSrc);
+                                         $('._save').attr('src', saveSrc);
+                                       });
+                                       $('._save').click(function()    {
+                                                                                                                                                                   // Ignore interaction if test is running
+                                           if(isRunning) {
+                                              alert('Assessment still running! Please press stop.');
+                                                return;
+                                             }
+                                                                                                                                                                   
+                                            if(!lastWordLogged) {
+                                              alert('Please tap the last word read and click Save.');
+                                                return;
+                                             }
+                                                                                                                                                                   
+                                             var datareport = '';
+                                                         
+                                            
+                                            annotations[annotations.length] = {'type': 't', 'timetaken': 60-timeLeft};
+                                             
+                                              $("#reporteddata").val(JSON.stringify(annotations));
+                                              
+                                            //lets implement the fake URL
+                                                         
+                                            var myAppName = 'testRWM';
+                                            var myActionType = 'saveJSONdataToNative';
+                                            var jsonString = (JSON.stringify(annotations));
+                                                         
+                                                         
+                                                         
+                                            var escapedJsonParameters = escape(jsonString);
+                                            
+                                                         var url = myAppName + '://' + myActionType + "#" + escapedJsonParameters;
+                                                         
+                                                       
+                                                         document.location.href = url;
+                                                         
+                                
+                                                         
+                                              $("#reportsubmitbutton").click();
+                                               
+                                        });
+                                         $('._showoptions').click(function() {
+                                           $('#displaytext').addClass('textshort');
+                                            $('#displayoptions').show();
+                                        });
+                                                                                                                                                                                            
+                                                                                                                                                                                            $('._closeoptions').click(function()
+                                                                                                                                                                                                                      {
+                                                                                                                                                                                                                      $('#displayoptions').hide();
+                                                                                                                                                                                                                      $('#displaytext').removeClass('textshort');
+                                                                                                                                                                                                                      });
+                                                                                                                                                                                                                      
+                                                                                                                                                                                                                      $('#changefontsize').change(function()
+                                                                                                                                                                                                                                                  {
+                                                                                                                                                                                                                                                  $('#displaytext').css('font-size', $('#size').val()+'pt');
+                                                                                                                                                                                                                                                  });
+                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                  $('#shownumbers').click(function()
+                                                                                                                                                                                                                                                                          {
+                                                                                                                                                                                                                                                                          showLineNumbers = !showLineNumbers;
+                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                          if(showLineNumbers)
+                                                                                                                                                                                                                                                                          {
+                                                                                                                                                                                                                                                                          $('.linenumbers').show();
+                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                          else
+                                                                                                                                                                                                                                                                          {
+                                                                                                                                                                                                                                                                          $('.linenumbers').hide();
+                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                          });
+         
+         
+         
+         
+         
+     
+                   }
+         
+         
+         */
+     
+</script>
+	
+	
+	
+</head>
+	
+	
+	<body id="page"  >
+	
+	
+            <div data-role="page" id="one">
+                    <div data-role="content">
+	
+
+
+
+                        <input type="hidden" name="m" value="27" />
+                        
+                        <div id="overlay" style="display: none; z-index: 10; position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; background-color: black; opacity: 0.1">
+                        </div><!--/overlay-->
+                        <div id="displaycorrection" class="rounded" style="display:none; z-index: 11; position: absolute; width:100px; background-color:#FFFFFF; padding:5px; text-align:center; border-style:solid; border-radius:10px; border-width:3px; border-color:#3f67a7" data-role="controlgroup" data-mini="true">
+                            <input type="button" class="_selecterrortype" data-errortype="0" value="Graphophonic" style="background-color:#FFFFFF"/>
+                            <input type="button" class="_selecterrortype" data-errortype="1" value="Semantic" style="background-color:#FFFFFF" />
+                            <input type="button" class="_selecterrortype" data-errortype="2" value="Skipped"  style="background-color:#FFFFFF"/>
+                            <input type="button" class="_selectcorrecttype" data-correcttype="3" value="Self correct" style="background-color:#FFFFFF" />
+                            <input type="button" class="_selecterrortype" data-errortype="4" value="Help" style="background-color:#FFFFFF"/>
+                            <input type="button" class="_selectcorrecttype" data-correcttype="5" value="Other" style="background-color:#FFFFFF"/>
+                            <input type="button" class="_selectnone" value="None" style="background-color:#FFFFFF"/>
+                        </div><!--/display corrections-->
+	
+                        <div id="testingscreen">
+                            <div id="controls" style="float:right; width: 125px; margin-left: 10px">
+                                <div style="padding: 10px;text-align: center" class="rounded">
+                                    <span id="timer" style="font-size: 18pt"></span><br /><br />
+                                        <div id="startButton" class="_startstop"><p class="buttontextStartStop"> Start </p> </div>
+                                        <div  class="_save" id="saveButton"><p class="buttontextSave"> Save </p> </div><br \>
+                
+                                    <br />
+                                    <div style="width:100px; border-style:solid; border-color:#3f67a7; height:30px; border-radius:10px ">
+                                    <a class="_showoptions">Options</a>
+                                    
+                                    </div>
+                                </div>
+            
+                                <div style="background-color: #cfeffd; margin-top: 10px; padding: 10px;text-align: center" class="rounded">
+                                    <u style="font-family:'Verdana'"><b>Miscues</b></u><br />
+                                    <span id="miscues"></span>
+                                </div>
+                            </div>
+    
+	
+                            <div id="displaytext" class="rounded" style="font-size: 16pt; line-height:150%; padding: 10px;">
+	
+                           </div>
+    
+                            <div id="displayoptions"  class="rounded" style="margin-top: 10px; padding: 10px; display:none; margin-right: 135px; font-family:'Verdana';">
+                                Options:<br/>
+                                <!--<label><input id="shownumbers" type="checkbox" value="1" class="checkbox" /> Show line numbers on side of passage</label>-->
+                                Font size:<br/><label id="changefontsize"><select id="size"><option value="22">22</option><option value="20">20</option><option value="18">18</option><option value="16" selected="selected">16</option><option value="14">14</option><option value="12">12</option><option value="11">11</option><option value="10">10</option></select></label>
+                                <input type="button" class="_closeoptions" value="Close" />
+	 
+	
+	 
+                            </div><!--/display Options-->
+   
+                        </div> <!--/testing Screen-->
+	
+	
+	</div><!--Content-->
+ 
+            </div>
+            <!--/One-->
+    </body>
+ <script>
+     
+     var helper = {};
+     
+     $().ready(function( )
+               
+               
+               
+               {
+               // alert ('document.Ready Function works!');
+               
+               
+               
+               var timerOption =1;
+               
+               helper.setContent = function(content)
+               {
+               
+               
+              // $('#displaytext').html(content.replace(/,,q,,/g, "\"").replace(/,,s,,/g, "'").replace(/,,l,,/g, '</span><br><span>'));
+               
+               
+               
+                $('#displaytext').html(content.replace(/,,q,,/g, "\"").replace(/,,s,,/g, "'").replace(/<br>$/g, ''));
+               }
+               
+               
+               var annotations = [];
+               var miscues = {};
+               var isRunning = false;
+               var lastWordLogged = false;
+               var lastError;
+               var showLineNumbers = false;
+               var timeLeft = 60;
+               var timeElapsed = 0;
+              
+               
+               helper.setTimerOption = function(theTimerOption)
+               {
+               
+               timerOption = theTimerOption;
+               
+               if(theTimerOption == 0)
+               {
+               
+               
+               
+               min = Math.floor((timeLeft)/60);
+               sec = (timeLeft)%60;
+               min = (min < 10) ? "0"+min : min;
+               sec = (sec < 10) ? "0"+sec : sec;
+               
+               $('#timer').html(min+":"+sec);
+               
+               
+              // alert ('theTimerOPtion 1-min is active' + timeLeft);
+               }
+               else
+               {
+              // alert ('Stopwatch is active');
+               
+               
+               
+               min = Math.floor((timeElapsed)/60);
+               sec = (timeElapsed)%60;
+               min = (min < 10) ? "0"+min : min;
+               sec = (sec < 10) ? "0"+sec : sec;
+               
+               $('#timer').html(min+":"+sec);
+               }
+               }
+               //now lets put the rest of the rwm code here:
+               
+               
+               
+               //timer tick functions:
+               function timerTick(){
+               
+               
+               if(timerOption == 0)
+               {
+               
+               // alert(timeLeft);
+               
+               timerTickDown();
+               }
+               else
+               {
+               timerTickUp();
+               // alert(timeElapsed);
+               
+               }
+               
+               
+               
+               
+               } //end timerTick
+               
+               
+               
+               
+               function timerTickUp()
+               {
+               //alert(timeElapsed);
+               
+               if(isRunning && timeElapsed < 3599)
+               {
+               timeElapsed++;
+               min = Math.floor((timeElapsed)/60);
+               sec = (timeElapsed)%60;
+               min = (min < 10) ? "0"+min : min;
+               sec = (sec < 10) ? "0"+sec : sec;
+               $('#timer').html(min+":"+sec);
+               
+               if(timeElapsed == 3599)
+               {
+               alert("Time has expired. Please select last word student read.");
+               
+               isRunning = false;
+               $('#saveButton').css('background-color', '#FF9900');
+               $('.buttontextStartStop').text('Start');
+               $('#startButton').css('background-color', '#3f67a7');
+               
+               }
+               }
+               
+               } //end timerTickUp
+               
+               function timerTickDown()
+               
+               {
+               //   alert(timeLeft);
+               
+               
+               if(isRunning && timeLeft > 0 )//&& timeLeft > 0
+               {
+               
+               
+               
+               timeLeft--;
+               if(timeLeft > 0)
+               {
+               min = Math.floor((timeLeft)/60);
+               sec = (timeLeft)%60;
+               min = (min < 10) ? "0"+min : min;
+               sec = (sec < 10) ? "0"+sec : sec;
+               $('#timer').html(min+":"+sec);
+               } //end timeLeft>0
+               
+               if(timeLeft == 0)
+               {
+               $('#timer').html("00:00");
+               
+               //  $('#startButton').css('background-color', '#AD3333', 'border-color', 'blue');
+               
+               alert("Time has expired. Please select last word student read.");
+               $('#saveButton').css('background-color', '#FF9900');
+               $('.buttontextStartStop').text('Start');
+               $('#startButton').css('background-color', '#3f67a7');
+               isRunning = false;
+               $('._save').attr('src', '/images/save.png');
+               
+               
+               }//end if time left = 0
+               }//end if isRunning && timeLeft
+               
+               } //end timerTickDown
+               
+               setInterval(timerTick, 1000);
+               
+               if(showLineNumbers == false)
+               {
+               $('.linenumbers').hide();
+               }
+               
+               $('#displaytext').on('click', 'span', function(e)
+               
+               //$('#displaytext span').click(function(e)
+                                            {
+                                    
+                                    
+                                    
+                                            if(!isRunning)
+                                            {
+                                  
+                                    
+                                            if(timeElapsed == 0 || timeLeft==60)
+                                            {
+                                            
+                                              //alert('timeElapsed==0');
+                                             // return;
+                                            }
+                                            if(lastWordLogged)
+                                            {
+                                            var wasLastWord = $(this).hasClass('lastword');
+                                            
+                                            $('.lastword').text($('.lastword').text().replace(/]$/, ''));
+                                            $('.lastword').removeClass('lastword');
+                                            $('.unread').removeClass('unread');
+                                            
+                                            if(wasLastWord)
+                                            {
+                                            // Just deselecting the last word.
+                                            lastWordLogged = false;
+                                            return;
+                                            }
+                                       
+                                            }
+                                            
+                                            var id = $(this).attr('id');
+                                            
+                                            $('#'+id).toggleClass('lastword');
+                                            $('#'+id).text($('#'+id).text()+"]");
+                                            lastWordLogged = true;
+                                            
+                                            var time = new Date();
+                                            
+                                            annotations[annotations.length] = {'type': 'l', 'time': time.getTime(), 'id': id, 'word': $(this).text().replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '')};
+                                            console.log(annotations);
+                                            
+                                            $(this).nextAll('span, div').addClass('unread');
+                                            return;
+                                            }
+                                            
+                                            var id = $(this).attr('id');
+                                            
+                                            if(id.substring(0,5) == "space")
+                                            {
+                                           return;
+                                    
+                                    
+                                            }
+                                   
+                                            var time = new Date();
+                                            var word = $(this).text().replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '').toLowerCase();
+                                            
+                                            $('#overlay').show();
+                                            $(this).addClass('highlight');
+                                            
+                                            var dSize = $('#displaycorrection').height();
+                                            var elem = $(e.currentTarget);
+                                            var posY = elem.offset().top+elem.height();
+                                            var bottom = $(window).scrollTop()+$(window).height();
+                                            
+                                            if(posY+dSize > bottom)
+                                    
+                                    
+                                    {
+                                            posY = elem.offset().top-dSize-10;
+                                            
+                                            if(posY-dSize < $(window).scrollTop())
+                                            {
+                                            posY = $(window).scrollTop()+(($(window).height()-dSize)/2);
+                                            }
+                                            }
+                                            
+                                            $('#displaycorrection').css('left', elem.offset().left+'px')
+                                            .css('top', (posY)+'px')
+                                            .show();
+                                            
+                                            lastError = {'type': 'i', 'time': time.getTime(), 'id': id, 'word': word};
+                                            
+                                            
+                                          //  alert('DisplayText');
+                                            
+                                            });
+               //end displaytext
+               
+               $('._selectnone').click(function()
+                                       {
+                                       $('#'+lastError.id).removeClass('incorrect');
+                                       $('#'+lastError.id).removeClass('highlight');
+                                       $('#overlay').hide();
+                                       $('#displaycorrection').hide();
+                                       
+                                       
+                                       
+                                       
+                                       });
+               
+               
+               
+               
+               
+               $('._selecterrortype').click(function() {
+                                            
+                                            
+                                            
+                                            $('#'+lastError.id).removeClass('highlight');
+                                            $('#overlay').hide();
+                                            $('#displaycorrection').hide();
+                                            
+                                            var errortype = $(this).attr('data-errortype');
+                                            
+                                            for(var i=annotations.length-1; i>=0; i--)
+                                            {
+                                            if(annotations[i].id && annotations[i].id == lastError.id)
+                                            {
+                                            annotations.splice(i, 1);
+                                            miscues[lastError.word]--;
+                                            break;
+                                            }
+                                            }
+                                            
+                                            $('#'+lastError.id).addClass('incorrect');
+                                            
+                                            lastError.type = errortype;
+                                            annotations[annotations.length] = lastError;
+                                            
+                                            console.log(lastError);
+                                            var word = lastError.word;
+                                            
+                                            if(miscues[word])
+                                            {
+                                            miscues[word]++;
+                                            }
+                                            else
+                                            {
+                                            miscues[word] = 1;
+                                            }
+                                            
+                                            var list = "";
+                                            for(var k in miscues)
+                                            {
+                                            if(miscues[k] > 1)
+                                            {
+                                            list += k+" <small>("+miscues[k]+")</small><br />";
+                                            }
+                                            
+                                            if(miscues[k] == 1)
+                                            {
+                                            list += k+"<br />";
+                                            }
+                                            }
+                                            
+                                            $('#miscues').html(list);
+                                            
+                                            console.log(annotations);
+                                            });
+               
+               $('._selectcorrecttype').click(function() {
+                                              $('#'+lastError.id).removeClass('highlight');
+                                              $('#overlay').hide();
+                                              $('#displaycorrection').hide();
+                                              var correcttype = $(this).attr('data-correcttype');
+                                              $('#'+lastError.id).addClass('correct');
+                                              lastError.type = correcttype;
+                                              $('#'+lastError.id).addClass('correct');
+                                              annotations[annotations.length] = lastError;
+                                              });//selectcorrecttype ends
+               
+               
+               
+               $('._startstop').click(function() {
+                                      var stopstartSrc;
+                                      var saveSrc;
+                                      var time = new Date();
+                                      if(isRunning) {
+                                      // stopstartSrc = '/images/start.png';
+                                      $('.buttontextStartStop').text('Start');
+                                      $('#startButton').css('background-color', '#3f67a7');
+                                      $('#saveButton').css('background-color', '#FF9900');
+                                      
+                                      var myAppName = 'stoppinglclock';
+                                      var myActionType = 'stoppingclockJSON';
+                                      // var dictionary= {'value', 'START'};
+                                      //  var jsonString = (JSON.stringify(dictionary));
+                                      
+                                      
+                                      
+                                      //  var escapedJsonParameters = escape(jsonString);
+                                      
+                                      var url = myAppName + '://' + myActionType + "#"  ;
+                                      
+                                      
+                                      document.location.href = url;
+                                      
+                                      
+                                      
+                                      //saveSrc = '/images/save.png';
+                                      isRunning = false;
+                                      annotations[annotations.length] = {'type': 'b', 'time': time.getTime()};
+                                      } else {
+                                      
+                                      
+                                      var myAppName = 'startclock';
+                                      var myActionType = 'startingclockJSON';
+                                      // var dictionary= {'value', 'START'};
+                                      //  var jsonString = (JSON.stringify(dictionary));
+                                      
+                                      
+                                      // alert ('Start Running');
+                                      //  var escapedJsonParameters = escape(jsonString);
+                                      
+                                      var url = myAppName + '://' + myActionType + "#"  ;
+                                      
+                                      
+                                      document.location.href = url;
+                                      
+                                      
+                                      
+                                      
+                                      
+                                      $('.buttontextStartStop').text('Stop');
+                                      $('#startButton').css('background-color', '#AD3333', 'border-color', 'blue');
+                                      
+                                      // stopstartSrc = '/images/stop.png';
+                                      saveSrc = '/images/savedisabled.png';
+                                      isRunning = true;
+                                      annotations[annotations.length] = {'type': 'a', 'time': time.getTime()};
+                                      }
+                                      console.log(annotations);
+                                      $('._startstop').attr('src', stopstartSrc);
+                                      $('._save').attr('src', saveSrc);
+                                      });
+               $('._save').click(function()    {
+                                 // Ignore interaction if test is running
+                                 if(isRunning) {
+                                 alert('Assessment still running! Please press stop.');
+                                 return;
+                                 }
+                                 
+                                 if(!lastWordLogged) {
+                                 alert('Please tap the last word read and click Save.');
+                                 return;
+                                 }
+                                 
+                                 var datareport = '';
+                                 
+                                 if (timerOption==0){
+                                 annotations[annotations.length] = {'type': 't', 'timetaken': 60-timeLeft};
+                                 }else{
+                                 
+                                 annotations[annotations.length] = {'type': 't', 'timetaken': timeElapsed};
+                                 
+                                 }
+                                 $("#reporteddata").val(JSON.stringify(annotations));
+                                 
+                                 //lets implement the fake URL
+                                 
+                                 var myAppName = 'testRWM';
+                                 var myActionType = 'saveJSONdataToNative';
+                                 var jsonString = (JSON.stringify(annotations));
+                                 
+                                 
+                                 
+                                 var escapedJsonParameters = escape(jsonString);
+                                 
+                                 var url = myAppName + '://' + myActionType + "#" + escapedJsonParameters;
+                                 
+                                 
+                                 document.location.href = url;
+                                 
+                                 
+                                 
+                                 $("#reportsubmitbutton").click();
+                                 
+                                 });
+               
+               
+               $('._showoptions').click(function() {
+                                        $('#displaytext').addClass('textshort');
+                                        $('#displayoptions').show();
+                                        });
+               
+               $('._closeoptions').click(function()
+                                         {
+                                         $('#displayoptions').hide();
+                                         $('#displaytext').removeClass('textshort');
+                                         });
+               
+               $('#changefontsize').change(function()
+                                           {
+                                           $('#displaytext').css('font-size', $('#size').val()+'pt');
+                                           });
+               
+               $('#shownumbers').click(function()
+                                       {
+                                       showLineNumbers = !showLineNumbers;
+                                       
+                                       if(showLineNumbers)
+                                       {
+                                       $('.linenumbers').show();
+                                       }
+                                       else
+                                       {
+                                       $('.linenumbers').hide();
+                                       }
+                                       });
+               
+               
+               
+               }); //end document.ready
+               
+               
+               //Exposed to iOS
+               function setContent(content)
+               {
+                   if(helper.hasOwnProperty('setContent')){
+                       
+                   
+                   helper.setContent(content);
+                   
+                   }
+                   
+                  // helper.setContent(content);
+               }
+ 
+ function setTimerOption(timerOption)
+ {
+     if(helper.hasOwnProperty('setTimerOption'))
+     helper.setTimerOption(timerOption);
+ }
+ 
+ 
+ $(window).scroll(function(){
+                  $("#controls").stop().animate({ "marginTop": ($(window).scrollTop() + 30) + "px"}, "slow");
+                  });
+ 
+ </script>
+</html>

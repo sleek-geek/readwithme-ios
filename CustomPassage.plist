@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>The Sweet Bitterness of Chocolate</string>
+		<key>Text</key>
+		<string>The cacao tree, whose seeds yield chocolate, is a strange sight to behold. About fifteen to twenty-five feet in height, the tree stands covered in oval-shaped pods, quite like the shape of a rugby ball, growing from every part of the tree, including its trunk! These foot-long pods turn purple-red in color once they ripen. If you pluck a ripe pod from the tree, split it open, and dig deep through the thick, whitish pulp that fills up the pod, you will find rows of seeds. It is these seeds - pale colored, bitter tasting and no bigger than almonds - that yield all the chocolate we eat. However, the journey from cacao seed to candy bar is a long one. It involves various treatments that the seeds need to undergo, from fermenting and roasting to shelling and crushing, before chocolate can be made out of them.
+There is also a dark side to the sweet taste of chocolate. In Ivory Coast, a country in Africa that produces nearly half of the world&apos;s cocoa, children are often forced to work as cheap labor on cacao farms. Instead of being at school or at play, these children are forced to put in long hours on the farm, harvesting chocolate beans. As a chocolate lover, if you want to see fair practices to positively impact the chocolate industry, you can take some small steps too. The next time you buy a bar of chocolate, look out for the words &apos;Fair Trade&apos; on the wrapper which tell you that the bar was not made from chocolate produced on a cacao farm that employs children as labor. Tell your friends about it too.</string>
+		<key>Comp1</key>
+		<string>What makes the cacao tree a “strange sight to behold”?</string>
+		<key>Comp2</key>
+		<string>What are some negative effects cacao harvest?</string>
+		<key>Comp3</key>
+		<string>What purpose(s) does the author have for writing this passage?</string>
+		<key>Lexile</key>
+		<integer>1220</integer>
+		<key>Grade</key>
+		<integer>0</integer>
+	</dict>
+</array>
+</plist>

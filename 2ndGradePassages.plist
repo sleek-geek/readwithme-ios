@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>Climbing Snakes</string>
+		<key>Text</key>
+		<string>Up in a tree a mother woodpecker laid her eggs. Her nest is up in the branches hiding from the snakes in the forest below. Snakes like to climb up to eat her eggs.
+When the snakes climb up the tree mother woodpecker can see them coming. She pecks at the tree bark. She pecks at it fast.
+Why does she peck at the tree? She pecks at the tree bark to get to the sap. The sap from the tree  is sticky. Snakes do not like the sap from tree. They think it stinks and it makes them dizzy.
+When the snakes reach the sap way up in the tree they cannot keep going. Some snakes get so dizzy that they fall back down to the forest floor. The mother bird saves her eggs!</string>
+		<key>Comp1</key>
+		<string>Tell me why the snakes climb the trees</string>
+		<key>Comp2</key>
+		<string>Why don&apos;t the snakes like the tree sap?</string>
+		<key>Lexile</key>
+		<integer>580</integer>
+		<key>Grade</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Tasty Stuff</string>
+		<key>Text</key>
+		<string>Candy and ice cream taste sweet. French fries taste salty. A big yellow lemon is sour. Fruit that is not ripe can taste bitter. Our sense of taste helps us know what food is safe and good to eat. It protects us from food that has gone bad.
+But not all animals taste things the same way. Did you know that some insects taste with their feet? Cats can&apos;t taste things that are sweet. An octopus tastes with its suckers. Some fish can taste with their tail and fins. Our taste buds are on our tongue. We have four kinds of taste buds: sweet, sour, salty, and bitter. All of the flavors we know are made from these four tastes.
+Our sense of smell also helps us taste. Try holding your nose when you taste your lunch. You will see that food wont taste as good. That is because taste and smell work together. Both of these help us decide if something tastes good.
+Have you ever tried to drink orange juice after brushing your teeth? Have you ever tried eating a hot pepper? These things can change how your taste buds work. But give your tongue some time and it will be back to normal. Tasting stuff is what the tongue is for!</string>
+		<key>Comp1</key>
+		<string>Name how two other animals you learned about taste their food.</string>
+		<key>Comp2</key>
+		<string>What are taste buds?</string>
+		<key>Comp3</key>
+		<string>What other sense helps us taste?</string>
+		<key>Lexile</key>
+		<integer>590</integer>
+		<key>Grade</key>
+		<integer>2</integer>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Panda Bears</string>
+		<key>Text</key>
+		<string>The giant panda is a type of bear. It is black and white. The male panda bear is heavy. It can weigh as much as 200 pounds! Though it is huge, it can easily climb trees and swim in water.
+Panda bears live in the mountains in China. To keep warm, they have thick fur.
+Panda bears cannot see very well. They can hear and smell very well. They can smell people from far, far away. They are shy animals. They hide when they smell or hear people coming.
+Panda bears eat plants. Their favorite food is bamboo. Panda bears spend a lot of time each day eating bamboo. They have big teeth and strong jaws to eat so much bamboo. Panda bears also eat grass, honey, roots, vines and bamboo leaves.
+A panda baby is called a cub. When it is born, the cub is tiny and helpless. It weighs very little, not even a pound! It is only about six inches long. The cub has no coat, just some fuzz. It uses its mother&apos;s thick fur to keep warm. Its mother has to carry it from place to place. The cub stays with its mother for the first two years of its life. It learns a lot from her.</string>
+		<key>Comp1</key>
+		<string>What is the panda bear’s favorite food?</string>
+		<key>Comp2</key>
+		<string>Does the panda bear’s good sense of smell help it in any way?</string>
+		<key>Comp3</key>
+		<string>Do you think it is cold in the mountains in China? Why?</string>
+		<key>Lexile</key>
+		<integer>530</integer>
+		<key>Grade</key>
+		<integer>2</integer>
+	</dict>
+</array>
+</plist>

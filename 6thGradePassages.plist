@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>Alice in Wonderland</string>
+		<key>Text</key>
+		<string>Alice was beginning to get very tired of sitting by her sister on the riverbank, and of having nothing to do. Once or twice she had peered into the book her sister was reading, but it had no pictures or conversations in it, &quot;and what good is a book,&quot; thought Alice, &quot;without pictures or conversations?&quot;
+She thought about making a daisy chain but didn&apos;t feel like getting up and picking the daisies, so she laid her head in her sister&apos;s lap and watched the clouds. Suddenly a White Rabbit with pink eyes ran by.
+&quot;Oh dear! Oh dear! I shall be late!&quot; the Rabbit said. It took a watch out of its waistcoat pocket, looked at it, and then hurried away. Alice jumped to her feet, for it flashed across her mind that she had never before seen a rabbit with either a waistcoat pocket, or a watch to take out of it, and being very curious , she ran across the field after it. She was just in time to see it pop down a large rabbit hole under the hedge. Without thinking, she followed.
+The rabbit hole was a long tunnel that seemed to go on forever. She made her way through the narrow passageway as best as she could, when suddenly it dropped down. Alice didn&apos;t have a minute to think before she realized she was falling down a very deep well!</string>
+		<key>Comp1</key>
+		<string>What did Alice do when the rabbit ran by?</string>
+		<key>Comp2</key>
+		<string>What was unusual about the rabbit?</string>
+		<key>Comp3</key>
+		<string>How is Alice different than her sister?</string>
+		<key>Lexile</key>
+		<integer>930</integer>
+		<key>Grade</key>
+		<integer>6</integer>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Gorillas</string>
+		<key>Text</key>
+		<string>Movies like King Kong have made the gorilla into a kind of a monster. Nothing could be further from the truth. Actually, gorillas are gentle giants. Yes, they do tend to be big and tall creatures. Adult males can weigh anywhere between 300 to 400 pounds and can have an arm span that stretches from 7 to 8 feet! But gorillas don&apos;t go on rampages or kill other animals. However, they do beat their chests with cupped hands!
+Gorillas prefer to live in groups called troops. An adult male, also known as the silverback, is the leader of the troop. The troop also includes younger males, several adult females and their offspring. The silverback is key to the safety and success of the troop. He makes all the decisions, resolves conflicts, finds feeding sites and is generally responsible for the well-being of the troop. Younger males, also known as blackbacks, rally around to provide protection to the troop.
+Gorillas communicate with other members of the troop using as many as twenty-five distinct sounds. These range from chirping like birds to hooting like owls at times! Gorillas use grunts and barks to indicate location, especially when they are around thick vegetation. On the other hand, screams and roars signal alarms or warnings. The silverback will often combine loud screams with actions like chest beating to warn younger gorillas to back off. Baby gorillas whine and cry, much like human babies, when they need their mothers to attend to them. Gorillas also seem to have a sense of fun as they have been observed laughing and even sticking out their tongues at others!
+Gorillas are considered highly intelligent. A few captive gorillas have been taught to communicate using sign language. They have also been observed using tools like rocks to smash open nuts or improvising a fallen branch as a club. This tool using ability is rare in the animal kingdom, and proves that gorillas are more than fearsome, chest-thumping beasts.</string>
+		<key>Comp1</key>
+		<string>How are gorillas not quite the monsters they are made out to be?</string>
+		<key>Comp2</key>
+		<string>What are the silverback’s responsibilities toward its troop?</string>
+		<key>Comp3</key>
+		<string>Describe two ways in which gorillas communicate with each other.</string>
+		<key>Lexile</key>
+		<integer>1000</integer>
+		<key>Grade</key>
+		<integer>6</integer>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Safety in Numbers</string>
+		<key>Text</key>
+		<string>Imagine you were an animal with no sharp teeth or claws to fight off other animals. What would you do? You would stick with other animals of your own kind, in a big, big group. This is what sheep tend to do. They feel safe when they stay together in groups called flocks. If you have ever visited a sheep farm, you will notice that sheep tend to huddle together a lot. A flock of sheep tends to move together when it has to find new pastures to graze on. While driving around the countryside, you must have seen flocks of sheep grazing together peaceably on a sunny hillside. Shepherds exploit this strong flocking behavior to transfer large numbers of sheep from place to place. Trained herding dogs can also easily replace shepherds to move flocks of sheep from one place to another. If a sheep happens to separate from other sheep, it will try its best to find its way back to the flock. An excellent sense of smell helps steer lost sheep find their flock. Animals like dogs and wolves know that it is easier to attack a sheep that has separated from its flock. When attacked, since a sheep cannot defend itself with its teeth or claws, it tends to panic and flee.
+Sheep also tend to follow the sheep in front of them. When the sheep at the front of the flock decides to go somewhere, the rest of the flock follows. Usually, this works well, as when the leader finds new, green pastures for the entire flock to graze on. However, sometimes, this can spell disaster, as when a flock of sheep follows its leader and jumps off cliffs! This tendency to blindly follow their leader has earned sheep a reputation for being unintelligent. However, a study on sheep found that the animals were actually quite smart, with an ability to solve problems like finding a way to get over cattle grids by rolling on their backs. Sheep can also recognize human faces and remember them for years!</string>
+		<key>Comp1</key>
+		<string>What is the main reason why sheep tend to stay in large groups?</string>
+		<key>Comp2</key>
+		<string>What helps a lost sheep find its way back to its flock?</string>
+		<key>Comp3</key>
+		<string>Why are sheep often considered ‘unintelligent’?</string>
+		<key>Lexile</key>
+		<integer>1060</integer>
+		<key>Grade</key>
+		<integer>6</integer>
+	</dict>
+</array>
+</plist>

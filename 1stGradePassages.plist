@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>Water Park</string>
+		<key>Text</key>
+		<string>Cindy and Mindy play.  They play hide n&apos; seek.  They play dress up.  They play kickball. They play dolls.
+It is a hot day. The sun shines. They play and it is hot.
+Cindy and Mindy go to the water park. They play hide n&apos; seek. They play dress up. They play kickball. They play dolls.
+It is a hot day. The sun shines. The water falls. They play and it is hot. They water feels cool. They play and play and play.</string>
+		<key>Comp2</key>
+		<string>Where do Cindy and Mindy go to get wet?</string>
+		<key>Comp1</key>
+		<string>What do Cindy and Mindy play?</string>
+		<key>Lexile</key>
+		<integer>40</integer>
+		<key>Grade</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Fish Dish</string>
+		<key>Text</key>
+		<string>Pat likes fish. She eats fish. Sam likes fish. He eats fish too. Pat and Sam share a fish dish. They share five pieces of fish.  
+Who will get two? Who will get three? What would you do?
+Pat gave Sam three pieces. Sam gave half to Pat. They shared the fish dish. They share toys. They share games. Pat and Sam like to share.
+They have fun. Pat and Sam always share that too!</string>
+		<key>Comp1</key>
+		<string>What did Pam give Sam?</string>
+		<key>Comp2</key>
+		<string>What do Pam and Sam do with their fish?</string>
+		<key>Lexile</key>
+		<integer>130</integer>
+		<key>Grade</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>The New Doll</string>
+		<key>Text</key>
+		<string>Fun Land was a toy store in a far part of town. One day a girl and her mom came to buy a special toy. The girl saw a doll. It was a very pretty doll. She asked her mom if she could buy it.&quot; I want it! I want it!&quot; she said. The mom looked at the price and it was only seven dollars. Her mom said it was ok. They bought it and took it home. The girl was very happy.
+The girl played and played with her new doll. But that night the doll opened her eyes. She moved her little hands and feet. She walked to the window and climbed down the wall. Then the doll began to walk back to the store. She was lost, but she missed the other dolls.
+When the girl woke up she was so sad. She couldn&apos;t find her doll. She cried and cried. The next day her mom got her a new doll that didn&apos;t run away.</string>
+		<key>Comp1</key>
+		<string>Why was the girl sad?</string>
+		<key>Comp2</key>
+		<string>Why did the doll run away?</string>
+		<key>Comp3</key>
+		<string>What did the doll do?</string>
+		<key>Lexile</key>
+		<integer>330</integer>
+		<key>Grade</key>
+		<integer>1</integer>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Title</key>
+		<string>The Sweet Bitterness of Chocolate</string>
+		<key>Text</key>
+		<string>The cacao tree, whose seeds yield chocolate, is a strange sight to behold. About fifteen to twenty-five feet in height, the tree stands covered in oval-shaped pods, quite like the shape of a rugby ball, growing from every part of the tree, including its trunk! These foot-long pods turn purple-red in color once they ripen. If you pluck a ripe pod from the tree, split it open, and dig deep through the thick, whitish pulp that fills up the pod, you will find rows of seeds. It is these seeds - pale colored, bitter tasting and no bigger than almonds - that yield all the chocolate we eat. However, the journey from cacao seed to candy bar is a long one. It involves various treatments that the seeds need to undergo, from fermenting and roasting to shelling and crushing, before chocolate can be made out of them.
+There is also a dark side to the sweet taste of chocolate. In Ivory Coast, a country in Africa that produces nearly half of the world&apos;s cocoa, children are often forced to work as cheap labor on cacao farms. Instead of being at school or at play, these children are forced to put in long hours on the farm, harvesting chocolate beans. As a chocolate lover, if you want to see fair practices to positively impact the chocolate industry, you can take some small steps too. The next time you buy a bar of chocolate, look out for the words &apos;Fair Trade&apos; on the wrapper which tell you that the bar was not made from chocolate produced on a cacao farm that employs children as labor. Tell your friends about it too.</string>
+		<key>Comp1</key>
+		<string>What makes the cacao tree a “strange sight to behold”?</string>
+		<key>Comp2</key>
+		<string>What are some negative effects cacao harvest?</string>
+		<key>Comp3</key>
+		<string>What purpose(s) does the author have for writing this passage?</string>
+		<key>Lexile</key>
+		<integer>1220</integer>
+		<key>Grade</key>
+		<integer>8</integer>
+	</dict>
+	<dict>
+		<key>Title</key>
+		<string>Amelia Earhardt</string>
+		<key>Text</key>
+		<string>“There are a great many boys who would be better off making pies, and a great many girls who would be better off as mechanics,” Amelia Earhart is said to have once told an audience. If she did make the statement, Earhart was in a very good position to do so.
+As a pioneering woman aviator, she broke a seemingly impossible gender barrier. Her feat is remarkable if you stop for a moment and consider the times in which she grew up. Those were times when girls were supposed to keep their dresses clean and their hair neat, to sit properly and to speak politely. Girls were not supposed to hop over a fence, or hook a bait, or climb a tree or collect toads, let alone dream of piloting aircraft! In short, girls were supposed to be proper little ladies.
+Even as a child, Amelia had rebelled against such silly gender roles. Encouraged by their parents, Amelia and her younger sister Muriel knew how to swing a baseball bat, sled on a belly-whopper, and fly a kite, among other things. Once after a fun trip to a country fair, Amelia and Muriel even hammered out their own roller coaster at home, in imitation of the one at the fair! The girls’ mother swapped the prim, long dresses all girls were supposed to be clad in, for sensible, baggy pants and sturdy shirts for her own two girls – all the better for the rough-and-tumble adventures Amelia and Muriel were determined to have.
+It was not until she was twenty that Amelia happened to visit an airfield. A pilot was putting his aircraft through a series of dives and loops and Amelia and her friend who had accompanied her, watched in fascination. By the end of her short visit, probably by the time the pilot was safely landing his plane, Amelia had fallen in love with flying.
+However, it wasn’t until two years later, in Los Angeles, California, that Amelia could finally figure out how to enroll for flying lessons. Amelia excelled as a student, even surpassing the expectations of her demanding teacher, a woman aviator nicknamed ‘Snookie.’ By the time she got her pilot’s license in 1922, Amelia had learned not only how to steer, fly and land a plane, she could take apart the aircraft’s engine and put it all back together expertly. No bad at all for a woman who others expected only to be ableto cook and crochet!</string>
+		<key>Comp1</key>
+		<string>Think of  two words that would accurately describe Amelia Earhardt?</string>
+		<key>Comp2</key>
+		<string>How did Amelia challenge gender roles during her youth? Give examples. </string>
+		<key>Comp3</key>
+		<string> In your opinion, what made Amelia&apos;s accomplishments so remarkable?</string>
+		<key>Lexile</key>
+		<integer>1270</integer>
+		<key>Grade</key>
+		<integer>8</integer>
+	</dict>
+</array>
+</plist>
