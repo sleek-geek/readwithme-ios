@@ -1,5 +1,6 @@
-## readwithme-ios
-==============
+# readwithme-ios
+
+![rwmlogo](https://github.com/vivertido/readwithme-ios/blob/master/RWMStudent/RWM%20logo%20lrg.png)
 
 This app was built between 2012 and 2014 and was available for a few years afterwards in the Apple iTunes App store. It is the companion app to the web version. Both of these apps are no longer live, but the code here remains for legacy purposes. 
 
